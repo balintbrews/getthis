@@ -17,3 +17,12 @@ function getthis_ctools_plugin_type() {
   );
   return $plugins;
 }
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function getthis_ctools_plugin_directory($module, $type) {
+  if ($module == 'getthis') {
+    return 'lib/Drupal/getthis/Plugin/getthis/Service';
+  }
+}
