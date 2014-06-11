@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Get and display something from the internet using a public API.
+ */
+
+
+/**
+ * Implements hook_ctools_plugin_type().
+ */
+function getthis_ctools_plugin_type() {
+  $plugins['Getthis\Service'] = array(
+    'classes' => array('class'),
+    'extension' => 'php',
+    'cache' => TRUE,
+  );
+  return $plugins;
+}

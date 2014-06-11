@@ -1,0 +1,6 @@
+name = Get This!
+description = Get and display something from the internet using a public API.
+core = 7.x
+version = 7.x-1.x-dev
+dependencies[] = ctools
+dependencies[] = xautoload
