@@ -48,3 +48,13 @@ function getthis_plugin_load($service) {
   ctools_include('plugins');
   return ctools_get_plugins('getthis', 'Getthis\Service', $service);
 }
+
+/**
+ * Page callback: Displays something from the internet.
+ */
+function getthis_page($service) {
+  $query_parameters = $_GET;
+  unset($query_parameters['q']);
+  $response = $service['class']::request($query_parameters);
+  return $service['class']::render($response);
+}
