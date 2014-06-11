@@ -5,6 +5,20 @@
  * Get and display something from the internet using a public API.
  */
 
+/**
+ * Implements hook_menu().
+ */
+function getthis_menu() {
+  $items = array();
+  $items['getthis/%getthis_plugin'] = array(
+    'title' => 'Something from the internet',
+    'page callback' => 'getthis_page',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
 
 /**
  * Implements hook_ctools_plugin_type().
